@@ -1,0 +1,112 @@
+# ==================================================== #
+#                 dClanSystem - Config                 #
+#            Desenvolvido por diogocorreadcs           #
+# ==================================================== #
+
+settings:
+  max-clan-name-length: 16
+  max-clan-tag-length: 4
+  friendly-fire-enabled: false
+  # Requer Vault e um plugin de economia; 0 desativa a cobrança.
+  clan-creation-cost: 0.0
+
+history:
+  enabled: true
+  # Quantidade de registros guardados por clã (os mais antigos são removidos).
+  max-entries-per-clan: 100
+  entries-per-page: 8
+  date-format: "dd/MM/yyyy HH:mm:ss"
+  leader-only: true
+  actions:
+    join: "entrou no clã"
+    leave: "saiu do clã"
+    kick: "foi expulso"
+
+home:
+  warmup-seconds: 5
+  countdown-interval-seconds: 1
+  # Cobranças opcionais; requer Vault e um plugin de economia.
+  set-cost: 0.0
+  teleport-cost: 0.0
+  cancel-on-move: true
+  cancel-on-damage: true
+
+top:
+  entries: 10
+  # Pontos são acumulados por membro criado/saído/expulso e mensagens no chat do clã.
+  activity-points:
+    membership-change: 1
+    chat-message: 1
+
+# Permissões dclansystem.command.* podem ser configuradas pelo LuckPerms.
+# Placeholders PAPI: %dclansystem_name%, %dclansystem_tag%,
+# %dclansystem_members%, %dclansystem_online%, %dclansystem_leader%,
+# %dclansystem_role%, %dclansystem_activity%, %dclansystem_score%,
+# %dclansystem_has_clan%, %dclansystem_has_home%.
+# Ranking PAPI (troque 1 pela posição): %dclansystem_top_name_1%,
+# %dclansystem_top_tag_1%, %dclansystem_top_members_1%,
+# %dclansystem_top_online_1%, %dclansystem_top_activity_1%.
+
+messages:
+  prefix: "&2[dClanSystem] &7"
+  only-players: "&cEste comando só pode ser executado por jogadores."
+  no-permission: "&cVocê não tem permissão para executar este comando."
+  economy-unavailable: "&cA economia não está disponível. Avise um administrador."
+  insufficient-funds: "&cVocê precisa de {amount} para criar um clã."
+
+  history:
+    title: "&6Histórico do clã &e{clan} &7({page}/{pages})"
+    entry: "&7{date} &e{player} &f{action} &7por &e{actor}"
+    empty: "&7Ainda não há registros no histórico."
+    leader-only: "&cApenas o líder pode consultar o histórico do clã."
+    invalid-page: "&cNúmero de página inválido."
+
+  home:
+    usage: "&cUse /clan h [set]."
+    insufficient-funds: "&cVocê precisa de {amount} para usar a home do clã."
+    set: "&aHome do clã definida na sua localização."
+    set-failed: "&cNão foi possível definir a home."
+    not-set: "&cO clã ainda não definiu uma home."
+    warmup-start: "&aTeleporte em {seconds} segundos. Não se mova."
+    warmup-countdown: "&eTeleportando em {seconds}s..."
+    warmup-cancelled: "&cTeleporte cancelado porque você se moveu ou sofreu dano."
+    teleported: "&aVocê chegou à home do clã."
+    teleport-failed: "&cO teleporte foi bloqueado; nenhum valor foi cobrado."
+
+  top:
+    title: "&6Top clãs por {category}"
+    usage: "&cUse /clan top [membros|online|atividade]."
+    empty: "&7Ainda não existem clãs no ranking."
+    categories:
+      membros: "membros"
+      online: "membros online"
+      atividade: "atividade"
+    lines:
+      - "&e{position}. &a[{tag}] {clan} &7- &f{value}"
+
+  clan:
+    created: "&aClã [{tag}] &e{name} &acriado com sucesso!"
+    already-in-clan: "&cVocê já pertence a um clã ou este nome já está em uso."
+    not-in-clan: "&cVocê não pertence a nenhum clã."
+    not-leader: "&cApenas o líder do clã pode executar esta ação."
+    player-offline: "&cJogador não encontrado ou offline."
+    target-in-clan: "&cEste jogador já pertence a um clã."
+    invite-sent: "&aConvite enviado para &e{player}&a!"
+    invite-received: "&aVocê recebeu um convite para entrar no clã &e[{tag}] {name}&a! Use &e/clan aceitar &apara entrar."
+    no-invite: "&cVocê não possui nenhum convite pendente ou o clã não existe mais."
+    joined: "&aVocê entrou no clã &e[{tag}] {name}&a!"
+    leader-cannot-leave: "&cVocê é o líder do clã. Use &e/clan deletar &cpara desfazê-lo."
+    left: "&cVocê saiu do clã &e{name}&c."
+    disbanded: "&cO seu clã foi desfeito."
+    friendly-fire-blocked: "&cVocê não pode ferir membros do seu próprio clã!"
+
+  gui:
+    menu-title: "&2Gerenciamento de Clã"
+    info-item-name: "&aInformações do Clã"
+    info-item-lore:
+      - "&7Clique para ver os detalhes"
+      - "&7e membros do seu clã."
+    invite-item-name: "&6Convidar Membro"
+    invite-item-lore:
+      - "&7Clique para abrir o"
+      - "&7menu de convites."

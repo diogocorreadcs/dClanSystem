@@ -1,0 +1,49 @@
+name: dClanSystem
+version: 1.0.0
+main: com.diogocorreadcs.clansystem.ClanSystem
+api-version: 1.8
+author: diogocorreadcs
+softdepend: [Vault, PlaceholderAPI, CoreProtect, LogBlock, WorldGuard, Essentials, CMI]
+commands:
+  clan:
+    description: Comando principal do sistema de clãs.
+    usage: /clan [criar|info|convidar|aceitar|sair|deletar|log|h|base|top]
+    aliases: [clans]
+  cc:
+    description: Envia mensagens ou alterna para o canal de chat do clã.
+    usage: /cc [mensagem]
+    permission: dclansystem.command.chat
+permissions:
+  dclansystem.command.chat:
+    description: Permite usar o chat do clã.
+    default: true
+  dclansystem.command.create:
+    description: Permite criar um clã.
+    default: true
+  dclansystem.command.info:
+    description: Permite consultar informações do clã.
+    default: true
+  dclansystem.command.invite:
+    description: Permite convidar jogadores para o clã.
+    default: true
+  dclansystem.command.accept:
+    description: Permite aceitar um convite de clã.
+    default: true
+  dclansystem.command.leave:
+    description: Permite sair do clã.
+    default: true
+  dclansystem.command.disband:
+    description: Permite desfazer o clã.
+    default: true
+  dclansystem.command.log:
+    description: Permite consultar o histórico do clã.
+    default: true
+  dclansystem.command.home:
+    description: Permite usar a home compartilhada do clã.
+    default: true
+  dclansystem.command.sethome:
+    description: Permite definir a home compartilhada do clã.
+    default: true
+  dclansystem.command.top:
+    description: Permite consultar o ranking de clãs.
+    default: true
