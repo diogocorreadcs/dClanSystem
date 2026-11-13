@@ -6,7 +6,7 @@
   <a href="https://github.com/diogocorreadcs/dClanSystem" target="_blank">
     <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Badge"/>
   </a>
-  <a href="https://getspigot.org/" target="_blank">
+  <a href="https://getbukkit.org/download/spigot" target="_blank">
     <img src="https://img.shields.io/badge/Spigot_1.8.8-181717?style=for-the-badge&logo=minecraft&logoColor=white" alt="Spigot 1.8.8"/>
   </a>
   <a href="https://www.java.com/" target="_blank">
